@@ -1,0 +1,15 @@
+﻿@model Ejercicio_2.Models.OracionModel
+
+<h2>Frases y Contador de Vocales</h2>
+
+<form asp-action="ContarVocales" method="get">
+    <label for="frase">Escribe una frase:</label>
+    <input type="text" id="frase" name="frase" value="@Model.Frase" />
+    <button type="submit">Contar las Vocales</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Frase))
+{
+    <p>La frase: @Model.Frase</p>
+    <p>Cantidad de vocales: @Model.Cantidad_Vocales</p>
+}
