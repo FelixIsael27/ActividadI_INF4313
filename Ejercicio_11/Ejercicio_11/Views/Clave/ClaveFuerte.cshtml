@@ -1,0 +1,25 @@
+﻿@model Ejercicio_11.Models.ContrasenaModel
+
+@{
+    ViewData["Title"] = "Verificar Contraseña";
+}
+
+<h2>Verificar Contraseña</h2>
+
+<form asp-action="ClaveFuerte" method="post">
+    <div>
+        <label asp-for="Contraseña"></label>
+        <input asp-for="Contraseña" />
+        <span asp-validation-for="Contraseña"></span>
+    </div>
+    <button type="submit">Verificar</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Mensaje))
+{
+    <p>@Model.Mensaje</p>
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
