@@ -1,0 +1,14 @@
+﻿@model Ejercicio_9.Models.FechaModel
+
+<h2>Verificar Día de la Semana</h2>
+
+<form asp-action="DiaSemana" method="post">
+    <label for="fecha">Selecciona una fecha:</label>
+    <input asp-for="Fecha" type="date" />
+    <button type="submit">Verificar</button>
+</form>
+
+@if (Model != null && Model.DiaSemana != null)
+{
+    <p>La fecha @Model.Fecha.ToString("yyyy-MM-dd") corresponde a: @Model.DiaSemana</p>
+}
