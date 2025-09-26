@@ -1,0 +1,17 @@
+﻿@model Ejercicio_10.Models.CorreoModel
+
+@{
+    ViewData["Title"] = "Nombre de Usuario";
+}
+
+<h2>Nombre de Usuario</h2>
+
+@if (!string.IsNullOrEmpty(Model.Mensaje_Error))
+{
+    <p>@Model.Mensaje_Error</p>
+}
+else
+{
+    <p>Correo completo: @Model.Email</p>
+    <p>El nombre de usuario es: @Model.Nombre_Usuario</p>
+}
