@@ -1,0 +1,25 @@
+﻿@model Ejercicio_4.Models.AnagramaModel
+
+@{
+    ViewData["Title"] = "Verificar Anagrama";
+}
+
+@if (string.IsNullOrWhiteSpace(Model.Texto1) || string.IsNullOrWhiteSpace(Model.Texto2))
+{
+    <p>Debes proporcionar dos textos válidos.</p>
+}
+else
+{
+    <p><strong>Texto 1:</strong> @Model.Texto1</p>
+    <p><strong>Texto 2:</strong> @Model.Texto2</p>
+
+    @if (Model.Es_o_NoAnagrama)
+    {
+        <h3>Sí, son anagramas</h3>
+    }
+    else
+    {
+        <h3>No, no son anagramas</h3>
+    }
+}
+
