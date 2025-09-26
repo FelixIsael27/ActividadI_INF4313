@@ -1,0 +1,14 @@
+﻿@model Ejercicio_5.Models.TabladeMultiplicar
+
+@{
+    ViewData["Title"] = "Tabla de Multiplicación";
+}
+
+<h2>Tabla de multiplicación del número @Model.Numero</h2>
+
+<ul>
+    @foreach (var linea in Model.Resultados)
+    {
+        <li>@linea</li>
+    }
+</ul>
