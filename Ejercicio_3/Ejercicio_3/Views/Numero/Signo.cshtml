@@ -1,5 +1,24 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Ejercicio_3.Models.NumModel
+
 @{
+	ViewData["Titulo"] = "Verificar el signo de un Número";
+}
+
+<h2>Verificar signo de un Número</h2>
+
+<form asp-action="Signo" method="post">
+    <div>
+        <label asp-for="Numero">Ingrese un número:</label>
+        <input asp-for="Numero" type="number" class="form-control" />
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Verificar Número</button>
+</form>
+
+@if (Model.Resultado != null)
+{
+    <hr />
+    <h3>Resultado:</h3>
+    <p>@Model.Resultado</p>
 }
