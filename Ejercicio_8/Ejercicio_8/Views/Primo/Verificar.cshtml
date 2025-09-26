@@ -1,0 +1,19 @@
+﻿@model Ejercicio_8.Models.PrimoModel
+
+@{
+    ViewData["Title"] = "Verificar Número Primo";
+}
+
+<h2>Verificación de un Número Primo</h2>
+
+<p>
+    El número @Model.Numero
+    @if (Model.Es_o_No_Primo)
+    {
+        <span>Es un Número Primo</span>
+    }
+    else
+    {
+        <span>No es un Número Primo </span>
+    }
+</p>
